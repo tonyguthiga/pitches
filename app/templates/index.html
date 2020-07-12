@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% import 'macros.html' as macro %}
 
 <!DOCTYPE html>
 <html>
@@ -12,6 +11,8 @@
         {% endif %}
     </head>
     <body>
+        {% block content %}
         <h3> Sales Pitch</h3>
+        {% endblock%}
     </body>
 </html>
