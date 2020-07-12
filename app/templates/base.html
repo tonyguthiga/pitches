@@ -1,6 +1,25 @@
 {% extends 'bootstrap/base.html'%}
 
-<!-- Navbar block  --> 
-{% block navbar %}
-    {% include 'navbar.html' %}
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Welcome to the best Pitch website </title>
+        {% endif %}
+    </head>
+    <body>
+        <!-- Navbar block  --> 
+        {% block navbar %}
+            {% include 'navbar.html' %}
+        {% endblock %}
+
+        {% block content %}
+        
+        {% endblock%}
+        
+    </body>
+</html>
+
