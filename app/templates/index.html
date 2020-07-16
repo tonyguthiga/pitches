@@ -1,5 +1,5 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,12 +7,36 @@
         {% if title %}
         <title> {{ title }}</title>
         {% else %}
-        <title> Welcome to the best Pitch website </title>
+        <title> Welcome to the best Pitches app </title>
         {% endif %}
     </head>
-    <body>
-        {% block content %}
-        <h3> Sales Pitch</h3>
-        {% endblock%}
-    </body>
-</html>
+<body>
+
+{% block content %}
+<br>
+<div class="container">
+    <div class="text-align-center text-center">
+        <div>
+            <h4>
+                <a class="btn btn-primary" href="/add/category">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add a category</a>
+            </h4>
+            <ol class="category-list list-inline-item">
+                {{macro.displayCategorylist(categories)}}
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="jumbotron">
+        <h3 class="text-center">All Pitches</h3>
+        <hr class="my-4">
+        <div class="col-md-8 ml-md-auto">
+            <p class="lead"> {{macro.displayAllPitches(all_pitches)}} </p>
+        </div>
+        <hr class="my-4">
+    </div>
+</div>
+{% endblock %}
+</body>
+
