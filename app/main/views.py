@@ -4,7 +4,7 @@ from flask_login import login_required,current_user
 from ..models import User, PitchCategory, Pitch, Comments, Votes
 # from .forms import UpdateProfile
 from .forms import PitchForm, CommentForm, CategoryForm
-from .. import db,photos
+from .. import db
 
 #display categories on the landing page
 @main.route('/')
