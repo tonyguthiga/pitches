@@ -1,6 +1,6 @@
 # Title:
 
-PITCH
+PITCH APP
 
 ## Project Description:
 
